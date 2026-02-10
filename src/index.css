@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-white bg-dark-900;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  }
+  
+  .card-gradient {
+    background: linear-gradient(145deg, rgba(30,30,30,0.8) 0%, rgba(18,18,18,0.9) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+}

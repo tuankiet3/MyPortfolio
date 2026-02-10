@@ -1,0 +1,54 @@
+Võ Huỳnh Tuấn Kiệt
+Danang, Vietnam| 0366383967 | vohtuankiet3004@gmail.com
+ Software student pivoting to Frontend. Combining Backend expertise with UI passion to build seamless web
+applications. Ready for a challenging internship. 
+PROJECTS
+MERN Stack E-Commerce Platform
+Built a responsive, high-performance UI using ReactJS and Tailwind CSS, ensuring a seamless experience across devices.  
+Developed a comprehensive Admin Dashboard with real-time analytics charts and product management features.
+Link Github: https://github.com/tuankiet3/E-Commerce_Strore
+Tech Stack: ReactJS (Vite), Tailwind CSS, Node.js, MongoDB.
+
+CDIO-Dentist
+This is the major project of the CDIO course.
+Designed a backend for an online dental appointment booking system.
+Developed comprehensive RESTful APIs for core functionalities, including user authentication, patient profile
+management, and appointment scheduling. 
+Link Github: https://github.com/nguyenthikimhue2004/CDIO-Dentist-Backend
+Tech Stack: Node.js, Express.js, MySQL, JWT, Bcrypt
+
+Integrations System
+This Integration System is a backend application designed to manage human resources functions. 
+It features modules for employee data, salary processing, attendance tracking, and automated email notifications.
+Built using .NET, it aims to streamline HR operations and provide essential reporting capabilities. 
+Link Github: https://github.com/tuankiet3/Integration-System-Backend
+Tech Stack: C#, ASP.NET core, MySQL, SQLServer, OAuth 2.0 Client
+
+WORK EXPERIENCE
+Intern Backend (.NET/C#) CSE Center 
+ - Duy Tan University
+July 2025 - September 2025
+Da Nang, Viet Nam
+Interned with C# and the ASP.NET Core framework. Participated in
+developing several small projects using the .NET MVC model, and was
+responsible for building a product introduction chatbot based on the
+product database to enhance user interaction and accessibility. 
+EDUCATION
+Duy Tan University
+Software Engineer  •  2022 - 2026
+GPA: 3.34/4.0
+CERTIFICATIONS
+Samsung Innovation Campus (SIC) 2025 Certificate of Completion
+Artificial Intelligence Training Course (4/2025 - 6/2025)
+Skills
+Frameworks/Tools: ExpressJS, ASP.NET Core, ReactJS
+(basic), Tailwind CSS, RESTful APIs, Git.
+Languages & Frontend: HTML5, CSS3, JavaScript (ES6+),
+C#
+Databases: MySQL, SQL Server.
+Team Collaboration: Trello is used for task management
+and Scrum workflow.
+Language
+English: My English communication ability is at a decent
+level, with an 'English Score' result equivalent to TOEIC
+780. 
