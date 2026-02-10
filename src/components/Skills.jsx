@@ -4,15 +4,9 @@ import { motion } from 'framer-motion';
 const Skills = () => {
   const skills = [
     {
-      category: 'Frontend',
-      items: [
-        'ReactJS', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Vite'
-      ]
-    },
-    {
       category: 'Backend',
       items: [
-        'Node.js', 'Express.js', 'ASP.NET Core', 'RESTful APIs', 'JWT', 'OAuth 2.0'
+        'Node.js', 'Express.js', 'ASP.NET Core', 'RESTful APIs', 'JWT', 'OAuth 2.0', 'C#', '.NET MVC'
       ]
     },
     {
@@ -24,7 +18,7 @@ const Skills = () => {
     {
       category: 'Tools & Others',
       items: [
-        'Git', 'Trello', 'Scrum', 'Postman', 'Figma (Basic)'
+        'Git', 'Postman', 'Docker', 'Trello', 'Scrum'
       ]
     }
   ];
@@ -42,11 +36,11 @@ const Skills = () => {
             My Tech Stack
           </motion.h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            A versatile skillset bridging the gap between robust backend logic and engaging frontend interfaces.
+            Focusing on building robust, scalable backend systems and efficient APIs.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((category, index) => (
             <motion.div
               key={index}

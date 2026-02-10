@@ -26,7 +26,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Software Engineering student based in Da Nang, Vietnam. Pivoting from Backend to Frontend with a passion for creating high-performance, responsive applications.
+            Software Engineering student based in Da Nang, Vietnam. Specialized in Backend Development with a passion for building scalable, high-performance systems.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="#projects" className="btn-primary bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 shadow-lg shadow-primary-500/30 transform hover:-translate-y-1 transition-all duration-300 px-8 py-3 rounded-full text-lg font-semibold">
