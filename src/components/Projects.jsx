@@ -6,8 +6,8 @@ const Projects = () => {
     {
       title: "MERN Stack E-Commerce Platform",
       description:
-        "A responsive online store with a comprehensive admin dashboard. Features real-time analytics and product management.",
-      tech: ["ReactJS", "Tailwind CSS", "Node.js", "MongoDB"],
+        "Built a responsive, high-performance UI using ReactJS and Tailwind CSS, ensuring a seamless experience across devices. Developed a comprehensive Admin Dashboard with real-time analytics charts and product management features.",
+      tech: ["ReactJS (Vite)", "Tailwind CSS", "Node.js", "MongoDB"],
       links: [
         {
           name: "Github",
@@ -16,9 +16,9 @@ const Projects = () => {
       ],
     },
     {
-      title: "CDIO-Dentist Booking System",
+      title: "CDIO-Dentist",
       description:
-        "Major CDIO project designing a backend for dental appointment bookings. Includes user authentication and patient profile management.",
+        "Major project of the CDIO course. Designed a backend for an online dental appointment booking system. Developed comprehensive RESTful APIs for core functionalities, including user authentication, patient profile management, and appointment scheduling.",
       tech: ["Node.js", "Express.js", "MySQL", "JWT", "Bcrypt"],
       links: [
         {
@@ -28,9 +28,9 @@ const Projects = () => {
       ],
     },
     {
-      title: "HR Integration System",
+      title: "Integration System",
       description:
-        "Backend application for HR management: employee data, salary processing, attendance, and automated emails.",
+        "A backend application designed to manage human resources functions. Features modules for employee data, salary processing, attendance tracking, and automated email notifications. Built using .NET to streamline HR operations and provide essential reporting capabilities.",
       tech: ["C#", "ASP.NET Core", "MySQL", "SQL Server", "OAuth 2.0"],
       links: [
         {
