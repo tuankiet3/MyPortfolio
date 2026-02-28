@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 const Projects = () => {
   const projects = [
     {
-      title: "MERN Stack E-Commerce Platform",
+      title: "CapSys – Smart DTU Capstone Project Management",
       description:
-        "Built a responsive, high-performance UI using ReactJS and Tailwind CSS, ensuring a seamless experience across devices. Developed a comprehensive Admin Dashboard with real-time analytics charts and product management features.",
-      tech: ["ReactJS (Vite)", "Tailwind CSS", "Node.js", "MongoDB"],
+        "Implemented a secure authentication pipeline using Google OAuth 2.0 and JWT, enforcing strict role-based access control (Admin, Lecturer, Student). Optimized application performance and data retrieval speed using Entity Framework Core.",
+      tech: ["C#", "ASP.NET Core", "MS SQL Server", "Redis", "Google Gemini API", "Google OAuth 2.0"],
       links: [
         {
           name: "Github",
-          url: "https://github.com/tuankiet3/E-Commerce_Strore",
+          url: "https://github.com/tuankiet3/capsys-backend",
         },
       ],
     },
