@@ -69,9 +69,9 @@ const Projects = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-dark-800 rounded-2xl overflow-hidden shadow-lg border border-white/5 hover:border-primary-500/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-500/10"
+              className="bg-dark-800 rounded-2xl overflow-hidden shadow-lg border border-white/5 hover:border-primary-500/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-500/10 flex flex-col h-full"
             >
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-1">
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-primary-500 transition-colors">
                   {project.title}
                 </h3>
@@ -88,7 +88,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 mt-auto pt-4">
                   {project.links.map((link, idx) => (
                     <a
                       key={idx}

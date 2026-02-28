@@ -77,15 +77,21 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 mt-8">
-              <a
-                href="https://github.com/tuankiet3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center bg-dark-800 rounded-full text-gray-400 hover:text-white hover:bg-dark-700 transition-all border border-white/5 shadow-md"
-              >
-                <FaGithub size={24} />
-              </a>
+            <div className="flex items-center gap-4 text-gray-300 hover:text-primary-500 transition-colors">
+              <div className="w-12 h-12 flex items-center justify-center bg-dark-800 rounded-full text-primary-500 border border-white/5 shadow-md">
+                <FaGithub size={20} />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg text-white">GitHub</h3>
+                <a
+                  href="https://github.com/tuankiet3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-400 hover:text-accent-500"
+                >
+                  github.com/tuankiet3
+                </a>
+              </div>
             </div>
           </motion.div>
 
