@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Resume from './components/Resume';
 import Contact from './components/Contact';
 import { HiDownload } from 'react-icons/hi';
 
@@ -16,6 +17,7 @@ function App() {
         <Skills />
         <Projects />
         <Experience />
+        <Resume />
         <Contact />
       </main>
       <footer className="bg-dark-900 text-center py-8 border-t border-white/5 text-gray-400">
