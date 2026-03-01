@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaEnvelope,
   FaPhone,
@@ -9,6 +9,50 @@ import {
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "057c3d50-0a5c-4bc8-97e4-5408b0aa228b",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `Portfolio Contact from ${formData.name}`,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch (err) {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -95,8 +139,9 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form (Placeholder) */}
+          {/* Contact Form */}
           <motion.form
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -112,6 +157,10 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 placeholder="Your Name"
                 className="w-full px-4 py-3 bg-dark-800 border border-white/5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500 transition-all"
               />
@@ -126,6 +175,10 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 placeholder="your@email.com"
                 className="w-full px-4 py-3 bg-dark-800 border border-white/5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500 transition-all"
               />
@@ -139,16 +192,34 @@ const Contact = () => {
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 placeholder="How can I help you?"
                 className="w-full px-4 py-3 bg-dark-800 border border-white/5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-white placeholder-gray-500 transition-all resize-none"
               ></textarea>
             </div>
+
+            {/* Status Messages */}
+            {status === "success" && (
+              <div className="px-4 py-3 rounded-lg bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-medium">
+                ✅ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="px-4 py-3 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-medium">
+                ❌ Failed to send message. Please try again or email me directly.
+              </div>
+            )}
+
             <button
               type="submit"
-              className="w-full btn-primary bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 shadow-lg shadow-primary-500/30 font-bold py-3 text-lg rounded-lg transform hover:-translate-y-1 transition-all duration-300"
+              disabled={status === "loading"}
+              className="w-full btn-primary bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 shadow-lg shadow-primary-500/30 font-bold py-3 text-lg rounded-lg transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
             >
-              Send Message
+              {status === "loading" ? "Sending..." : "Send Message"}
             </button>
           </motion.form>
         </div>
@@ -158,3 +229,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
